@@ -303,6 +303,7 @@ class NotesManager(BaseEvernote):
     def create_note(
             self,
             title: str,
+            notebook_guid: str = '',
             markdown_content: str = '',
             markdown_file_path: str = '',
     ) -> Note:
@@ -324,8 +325,10 @@ class NotesManager(BaseEvernote):
         note = Note()
         note.title = title
         note.resources = result_dict.get('resource_list', [])
-
         note.content = self.markdown_to_html(markdown_content, result_dict)
+
+        if notebook_guid:
+            note.notebookGuid = notebook_guid
 
         return self.note_store.createNote(note)
 

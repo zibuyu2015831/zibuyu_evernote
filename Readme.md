@@ -6,11 +6,17 @@
 
 这个版本是我自己对一些常用功能进行的封装，方便使用。
 
+## 安装
+
+```bash
+pip install zibuyu-evernote
+```
+
 ## 新增功能
 
 - 增加了markdown与印象笔记的转换功能；
 
-# 示例代码
+## 示例代码
 
 ```python
 from zibuyu_evernote import MyEvernote

@@ -6,13 +6,13 @@ project: zibuyu_LLM
 author: 子不语
 date: 2024/5/11
 contact: 【公众号】思维兵工厂
-description: 
+description: 编译文件
 --------------------------------------------
 """
 
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 DESCRIPTION = 'evernote的官方SDK的个人优化版'
 # long_description = DESCRIPTION
 
@@ -28,6 +28,7 @@ setup(
     author='子不语',
     packages=find_packages('./zibuyu_evernote'),
     license='MIT',
+    url='https://github.com/zibuyu2015831/zibuyu_evernote',
     package_dir={'': './zibuyu_evernote'},
     keywords=['zibuyu', 'zibuyu_evernote', 'evernote'],
     classifiers=[
